@@ -144,3 +144,4 @@ C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Presentation\ETicaretAPI.A
 C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.genruntimeconfig.cache
 C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ref\ETicaretAPI.API.dll
 C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Presentation\ETicaretAPI.API\obj\Debug\net9.0\ETicaretAPI.API.sourcelink.json

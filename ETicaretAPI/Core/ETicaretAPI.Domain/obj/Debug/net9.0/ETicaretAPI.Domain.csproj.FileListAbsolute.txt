@@ -10,3 +10,4 @@ C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Core\ETicaretAPI.Domain\ob
 C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net9.0\refint\ETicaretAPI.Domain.dll
 C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net9.0\ETicaretAPI.Domain.pdb
 C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net9.0\ref\ETicaretAPI.Domain.dll
+C:\Users\namelesswarrior\Desktop\ETicaret\ETicaretAPI\Core\ETicaretAPI.Domain\obj\Debug\net9.0\ETicaretAPI.Domain.sourcelink.json
