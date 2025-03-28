@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C98A9CB-CA93-F875-41B8-A4FFF5351156}|Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\presentation\\eticaretapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C98A9CB-CA93-F875-41B8-A4FFF5351156}|Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj|solutionrelative:presentation\\eticaretapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F71EDB65-2423-49F2-B72B-7D3C3A6B886E}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\infrastructure\\eticaretapi.persistence\\repositories\\implements\\common\\writerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F71EDB65-2423-49F2-B72B-7D3C3A6B886E}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\repositories\\implements\\common\\writerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\infrastructure\\eticaretapi.infrastructure\\services\\implements\\storage\\local\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|solutionrelative:infrastructure\\eticaretapi.infrastructure\\services\\implements\\storage\\local\\localstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C98A9CB-CA93-F875-41B8-A4FFF5351156}|Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\presentation\\eticaretapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C98A9CB-CA93-F875-41B8-A4FFF5351156}|Presentation\\ETicaretAPI.API\\ETicaretAPI.API.csproj|solutionrelative:presentation\\eticaretapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7FF31C-5DCE-4FDB-B4A1-2E33825B3CFC}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\core\\eticaretapi.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7FF31C-5DCE-4FDB-B4A1-2E33825B3CFC}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|solutionrelative:core\\eticaretapi.domain\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F71EDB65-2423-49F2-B72B-7D3C3A6B886E}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\infrastructure\\eticaretapi.persistence\\configurations\\fileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F71EDB65-2423-49F2-B72B-7D3C3A6B886E}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\configurations\\fileconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\infrastructure\\eticaretapi.infrastructure\\services\\implements\\storage\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|solutionrelative:infrastructure\\eticaretapi.infrastructure\\services\\implements\\storage\\storage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\infrastructure\\eticaretapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|solutionrelative:infrastructure\\eticaretapi.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|c:\\users\\namelesswarrior\\desktop\\eticaret\\eticaretapi\\infrastructure\\eticaretapi.infrastructure\\services\\implements\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8145784B-2D4D-48B2-B12C-AD5C694D453B}|Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj|solutionrelative:infrastructure\\eticaretapi.infrastructure\\services\\implements\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,60 +34,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\Program.cs",
               "RelativeDocumentMoniker": "Presentation\\ETicaretAPI.API\\Program.cs",
               "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\Program.cs",
               "RelativeToolTip": "Presentation\\ETicaretAPI.API\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAgwCYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T05:00:08.471Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ETicaretAPI.API\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Presentation\\ETicaretAPI.API\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T03:16:19.324Z",
+              "WhenOpened": "2025-03-27T02:35:16.807Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\Entities\\Product.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Domain\\Entities\\Product.cs",
-              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Core\\ETicaretAPI.Domain\\Entities\\Product.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Title": "Storage.cs",
+              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Storage.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Storage.cs",
+              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Storage.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Storage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T03:52:31.372Z",
+              "WhenOpened": "2025-03-28T00:19:02.12Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WriteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\Repositories\\Implements\\Common\\WriteRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\Repositories\\Implements\\Common\\WriteRepository.cs",
-              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\Repositories\\Implements\\Common\\WriteRepository.cs",
-              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\Repositories\\Implements\\Common\\WriteRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "LocalStorage.cs",
+              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Local\\LocalStorage.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Local\\LocalStorage.cs",
+              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Local\\LocalStorage.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\Local\\LocalStorage.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T03:45:57.871Z",
+              "WhenOpened": "2025-03-27T03:37:10.077Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\Configurations\\FileConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\Configurations\\FileConfiguration.cs",
+              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Persistence\\Configurations\\FileConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\Configurations\\FileConfiguration.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:52:32.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Infrastructure\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\ServiceRegistration.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Infrastructure\\ServiceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:37:18.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\StorageService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\StorageService.cs",
+              "ToolTip": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\StorageService.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Infrastructure\\Services\\Implements\\Storage\\StorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T03:37:13.065Z",
               "EditorCaption": ""
             }
           ]

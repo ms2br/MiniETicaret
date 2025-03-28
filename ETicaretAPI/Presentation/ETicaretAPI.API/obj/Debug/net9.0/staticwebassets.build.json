@@ -1,12 +1,125 @@
 {
   "Version": 1,
-  "Hash": "AYplJH3BpbWZUzqtFxLZ7g3GCwjPqG+gg9UG1+05vKs=",
+  "Hash": "CWH+n97taAQCpOmXMnaapvqox0HFwuVBwNWqDMpGPP0=",
   "Source": "ETicaretAPI.API",
   "BasePath": "_content/ETicaretAPI.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ETicaretAPI.API\\wwwroot",
+      "Source": "ETicaretAPI.API",
+      "ContentRoot": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Screenshot (3).png",
+      "SourceId": "ETicaretAPI.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.API",
+      "RelativePath": "resource/product-images/Screenshot (3)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "30lvfgpr1c",
+      "Integrity": "E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\resource\\product-images\\Screenshot (3).png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "resource/product-images/Screenshot (3).30lvfgpr1c.png",
+      "AssetFile": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Screenshot (3).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168404"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 03:36:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "30lvfgpr1c"
+        },
+        {
+          "Name": "label",
+          "Value": "resource/product-images/Screenshot (3).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ="
+        }
+      ]
+    },
+    {
+      "Route": "resource/product-images/Screenshot (3).png",
+      "AssetFile": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\Screenshot (3).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "168404"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 03:36:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ="
+        }
+      ]
+    }
+  ]
 }

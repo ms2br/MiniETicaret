@@ -1,0 +1,1 @@
+Apide Exception yardan vaxt service olarak filter kullan

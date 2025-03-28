@@ -1,4 +1,5 @@
-
+using ETicaretAPI.Infrastructure;
+using ETicaretAPI.Infrastructure.Services.Implements.Storage.Local;
 using ETicaretAPI.Persistence;
 
 namespace ETicaretAPI.API;
@@ -12,7 +13,8 @@ public class Program
         // Add services to the container.
 
         builder.Services.AddControllers();
-        builder.Services.AddBussinesLayer();
+        builder.Services.AddPersistenceLayer();
+        builder.Services.AddServicesInfrastructure<LocalStorage>();
         builder.Services.AddCors(options =>
         {
             options.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
@@ -29,6 +31,7 @@ public class Program
             app.MapOpenApi();
         }
 
+        app.UseStaticFiles();
         app.UseCors();
         app.UseHttpsRedirection();
         app.UseAuthorization();

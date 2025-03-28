@@ -1,6 +1,12 @@
 ﻿using ETicaretAPI.Application.Dtos.Products;
 using ETicaretAPI.Application.Repositories.Interfaces.Products;
+using ETicaretAPI.Application.RequestParameters;
+using ETicaretAPI.Application.Services.Interfaces;
+using ETicaretAPI.Application.Services.Interfaces.Storage;
 using ETicaretAPI.Domain.Entities;
+using ETicaretAPI.Infrastructure.Helpers;
+using ETicaretAPI.Infrastructure.Services.Implements;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
@@ -13,16 +19,38 @@ namespace ETicaretAPI.API.Controllers
     {
         IProductWriteRepository _wr { get; }
         IProductReadRepository _rr { get; }
-        public ProductsController(IProductWriteRepository wr, IProductReadRepository rr)
+        IStorageService _service { get; }
+
+        public ProductsController(
+            IProductWriteRepository wr,
+            IProductReadRepository rr,
+            IWebHostEnvironment webHostEnvironment,
+            IStorageService service)
         {
             _wr = wr;
             _rr = rr;
+            _service = service;
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetAsync()
+        public async Task<IActionResult> GetAsync([FromQuery] Pagination pagination)
         {
-            return Ok(_rr.GetAll());
+            var totalCount = _rr.GetAll().Count();
+            var listProduct = _rr.GetAll().Skip(pagination.Page * pagination.Size).Take(pagination.Size).Select(x => new
+            {
+                x.Id,
+                x.Name,
+                x.Price,
+                x.Stock,
+                x.CreationTime,
+                x.UpdateTime
+            });
+
+            return Ok(new
+            {
+                totalCount,
+                listProduct
+            });
         }
 
         [HttpGet("[action]/{id?}")]
@@ -34,18 +62,21 @@ namespace ETicaretAPI.API.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> PostAsync(ProductCreateDto dto)
         {
-            await _wr.AddAsync(new Product
+            for (int i = 0; i < 10; i++)
             {
-                 Name = dto.Name,
-                 Price = dto.Price,
-                 Stock = dto.Stock
-            });
-            await _wr.SaveChangesAsync();
+                await _wr.AddAsync(new Product
+                {
+                    Name = $"Urun {i}",
+                    Stock = i,
+                    Price = i
+                });
+                await _wr.SaveChangesAsync();
+            }
             return StatusCode((int)HttpStatusCode.Created);
         }
 
         [HttpPut("[action]/{id?}")]
-        public async Task<IActionResult> PutAsync(string? id,ProductUpdateDto dto)
+        public async Task<IActionResult> PutAsync(string? id, ProductUpdateDto dto)
         {
             var item = await _wr.FindByIdAsync(id);
             item.Name = dto.Name;
@@ -62,5 +93,12 @@ namespace ETicaretAPI.API.Controllers
             await _wr.SaveChangesAsync();
             return Ok();
         }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> UploadAsync()
+        {
+            await _service.UploadAsync(FilesPath.ProductImageFilesPath, Request.Form.Files);
+            return Ok();
+        } 
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using File = ETicaretAPI.Domain.Entities.File;
 
 namespace ETicaretAPI.Persistence.Contexts
 {
@@ -16,7 +17,9 @@ namespace ETicaretAPI.Persistence.Contexts
         DbSet<Order> Orders { get; set; }
         DbSet<Customer> Customers { get; set; }
         DbSet<ProductOrder> ProductOrder { get; set; }
-
+        DbSet<File> Files { get; set; }
+        DbSet<InvoiceFile> InvoiceFiles { get; set; }
+        DbSet<ProductImageFile> ProductImageFiles { get; set; }
         public PostgreSQLDbContext(DbContextOptions options) : base(options)
         { }
 

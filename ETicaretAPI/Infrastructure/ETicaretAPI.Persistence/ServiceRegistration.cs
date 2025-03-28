@@ -13,6 +13,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
+using ETicaretAPI.Application.Dtos.Products;
+using FluentValidation;
+using ETicaretAPI.Application.Repositories.Interfaces.Files;
+using ETicaretAPI.Persistence.Repositories.Implements.Files;
+using ETicaretAPI.Application.Repositories.Interfaces.InvoiceFiles;
+using ETicaretAPI.Persistence.Repositories.Implements.InvoiceFiles;
+using ETicaretAPI.Application.Repositories.Interfaces.ProductImageFiles;
+using ETicaretAPI.Persistence.Repositories.Implements.ProductImageFiles;
 
 namespace ETicaretAPI.Persistence
 {
@@ -32,13 +41,21 @@ namespace ETicaretAPI.Persistence
             services.AddScoped<IOrderWriteRepository, OrderWriteRepository>();
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();
+            services.AddScoped<IFileReadRepository, FileReadRepository>();
+            services.AddScoped<IFileWriteRepository, FileWriteRepository>();
+            services.AddScoped<IInvoiceFileReadRepository, InvoiceFileReadRepository>();
+            services.AddScoped<IInvoiceFileWriteRepository, InvoiceFileWriteRepository>();
+            services.AddScoped<IProductImageFileReadRepository, ProductImageFileReadRepository>();
+            services.AddScoped<IProductImageFileWriteRepository, ProductImageFileWriteRepository>();
             return services;
         }
 
-        public static IServiceCollection AddBussinesLayer(this IServiceCollection services)
+        public static IServiceCollection AddPersistenceLayer(this IServiceCollection services)
         {
             services.AddPostgreSQLContext();
             services.AddRepositories();
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssemblyContaining<ProductCreateDto>();
             return services;
         }
     }
