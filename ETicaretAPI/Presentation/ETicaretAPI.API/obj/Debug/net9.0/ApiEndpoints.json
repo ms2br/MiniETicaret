@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "ETicaretAPI.API.Controllers.AuthsController",
+    "Method": "LoginAsync",
+    "RelativePath": "api/Auths/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ETicaretAPI.Application.Features.Commands.Auths.LoginUser.LoginUserCommonRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "DeleteAsync",
     "RelativePath": "api/Products/Delete/{id}",
@@ -8,7 +24,33 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
+    "Method": "DeleteProductImageAsync",
+    "RelativePath": "api/Products/DeleteProductImage/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
         "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProductId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageId",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -24,13 +66,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Size",
-        "Type": "System.Int32",
+        "Name": "productQueryRequest",
+        "Type": "ETicaretAPI.Application.Features.Queries.Products.GetAllProduct.GetAllProductQueryRequest",
         "IsRequired": false
       }
     ],
@@ -45,9 +82,25 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
+    "Method": "GetProductImagesAsync",
+    "RelativePath": "api/Products/GetProductImages/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -61,8 +114,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "ETicaretAPI.Application.Dtos.Products.ProductCreateDto",
+        "Name": "request",
+        "Type": "ETicaretAPI.Application.Features.Commands.Products.CreateProduct.CreateProductCommonRequest",
         "IsRequired": true
       }
     ],
@@ -77,13 +130,13 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "ETicaretAPI.Application.Dtos.Products.ProductUpdateDto",
+        "Name": "request",
+        "Type": "ETicaretAPI.Application.Features.Commands.Products.UpdateProduct.UpdateProductCommonRequest",
         "IsRequired": true
       }
     ],
@@ -92,11 +145,33 @@
   {
     "ContainingType": "ETicaretAPI.API.Controllers.ProductsController",
     "Method": "UploadAsync",
-    "RelativePath": "api/Products/Upload",
+    "RelativePath": "api/Products/Upload/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ETicaretAPI.API.Controllers.UsersController",
+    "Method": "RegisterAsync",
+    "RelativePath": "api/Users/Register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ETicaretAPI.Application.Features.Commands.Register.CreateUser.CreateUserCommonRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

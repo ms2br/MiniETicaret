@@ -8,20 +8,14 @@ using ETicaretAPI.Persistence.Repositories.Implements.Products;
 using ETicaretAPI.Persistence.Repositories.Implements.Customers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation.AspNetCore;
-using ETicaretAPI.Application.Dtos.Products;
-using FluentValidation;
 using ETicaretAPI.Application.Repositories.Interfaces.Files;
 using ETicaretAPI.Persistence.Repositories.Implements.Files;
 using ETicaretAPI.Application.Repositories.Interfaces.InvoiceFiles;
 using ETicaretAPI.Persistence.Repositories.Implements.InvoiceFiles;
 using ETicaretAPI.Application.Repositories.Interfaces.ProductImageFiles;
 using ETicaretAPI.Persistence.Repositories.Implements.ProductImageFiles;
+using ETicaretAPI.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
 
 namespace ETicaretAPI.Persistence
 {
@@ -29,7 +23,23 @@ namespace ETicaretAPI.Persistence
     {
         static IServiceCollection AddPostgreSQLContext(this IServiceCollection services)
         {
-            services.AddDbContext<PostgreSQLDbContext>(x => x.UseNpgsql(DatabaseConfig.GetConnectionString()));
+            services.AddDbContext<PostgreSQLDbContext>(x => x.UseNpgsql(DatabaseConfig.GetConnectionString()))
+                .AddIdentity<AppUser, IdentityRole>(opt =>
+                {
+                    opt.SignIn.RequireConfirmedEmail = true;
+                    opt.SignIn.RequireConfirmedAccount = true;
+                    opt.Password.RequireLowercase = true;
+                    opt.Password.RequireUppercase = true;
+                    opt.Password.RequireNonAlphanumeric = true;
+                    opt.Password.RequiredLength = 6;
+                    opt.User.RequireUniqueEmail = true;
+                    opt.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_  ";
+                    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromHours(3);
+                    opt.Lockout.AllowedForNewUsers = true;
+                    opt.Lockout.MaxFailedAccessAttempts = 5;
+                })
+                .AddEntityFrameworkStores<PostgreSQLDbContext>()
+                .AddDefaultTokenProviders();
             return services;
         }
 
@@ -54,8 +64,6 @@ namespace ETicaretAPI.Persistence
         {
             services.AddPostgreSQLContext();
             services.AddRepositories();
-            services.AddFluentValidationAutoValidation();
-            services.AddValidatorsFromAssemblyContaining<ProductCreateDto>();
             return services;
         }
     }

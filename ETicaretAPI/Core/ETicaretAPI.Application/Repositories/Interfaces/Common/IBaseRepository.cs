@@ -11,9 +11,9 @@ namespace ETicaretAPI.Application.Repositories.Interfaces.Common
 {
     public interface IBaseRepository<T> where T : BaseEntity
     {
-        DbSet<T> Table { get; }
-        Task<T> FindAsync(Expression<Func<T, bool>> expression, bool isTracking = true);
-        Task<T> FindByIdAsync(string id,bool isTracking = true);
+        protected DbSet<T> Table { get; }
+        Task<T?> FindAsync(Expression<Func<T, bool>> expression, bool isTracking = true, params string[] includes);
+        Task<T?> FindByIdAsync(string id,bool isTracking = true, params string[] includes);
         Task SaveChangesAsync();
 
     }

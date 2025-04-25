@@ -22,13 +22,29 @@ namespace ETicaretAPI.Persistence.Repositories.Implements.Common
 
         public DbSet<T> Table => _pdb.Set<T>();
 
-        public async Task<T> FindAsync(Expression<Func<T, bool>> expression, bool isTracking = true)
-        => isTracking ? await Table.FirstAsync(expression) : await Table.AsQueryable().AsNoTracking().FirstOrDefaultAsync(expression);
+        public async Task<T?> FindAsync(Expression<Func<T, bool>> expression, bool isTracking = true, params string[] includes)
+        {
+            IQueryable<T> query = includes.Length > 0 ? includeRelations(Table.AsQueryable(), includes) : Table.AsQueryable();
 
-        public async Task<T> FindByIdAsync(string id, bool isTracking = true)
-        => isTracking ? await Table.FindAsync(Guid.Parse(id)) : await Table.AsQueryable().AsNoTracking().FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
+            return isTracking ? await query.FirstAsync(expression) : await query.AsNoTracking().FirstOrDefaultAsync(expression);
+        }
+
+        public async Task<T?> FindByIdAsync(string id, bool isTracking = true, params string[] includes)
+        {
+
+            IQueryable<T> query = includes.Length > 0 ? includeRelations(Table.AsQueryable(), includes) : Table.AsQueryable();
+
+            return isTracking? await query.FirstOrDefaultAsync(x=> x.Id == Guid.Parse(id)) : await query.AsNoTracking().FirstOrDefaultAsync(x => x.Id == Guid.Parse(id));
+        }
 
         public async Task SaveChangesAsync()
         => await _pdb.SaveChangesAsync();
+
+        protected IQueryable<T> includeRelations(IQueryable<T> query, params string[] includes)
+        {
+            foreach (string item in includes)
+                query = query.Include(item);
+            return query;
+        }
     }
 }

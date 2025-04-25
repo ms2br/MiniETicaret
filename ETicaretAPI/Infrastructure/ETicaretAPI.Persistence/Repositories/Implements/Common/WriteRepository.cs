@@ -23,7 +23,7 @@ namespace ETicaretAPI.Persistence.Repositories.Implements.Common
             return item.State == EntityState.Added;
         }
 
-        public async Task<bool> AddRangesAync(List<T> datas)
+        public async Task<bool> AddRangesAsync(List<T> datas)
         {
             await Table.AddRangeAsync(datas);
             return true;
@@ -35,7 +35,7 @@ namespace ETicaretAPI.Persistence.Repositories.Implements.Common
             return true;
         }
 
-        public async Task<bool> UpdateAsnyc(T data)
+        public async Task<bool> UpdateAsync(T data)
         {
             Table.Update(data);
             return true;

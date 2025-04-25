@@ -1,4 +1,5 @@
-﻿using ETicaretAPI.Application.Services.Interfaces.Storage;
+﻿using ETicaretAPI.Application.Dtos.Files;
+using ETicaretAPI.Application.Services.Interfaces.Storage;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,7 @@ namespace ETicaretAPI.Infrastructure.Services.Implements.Storage
         public async Task<bool> HasFile(string pathOrContainerName, string fileName)
         => await _storage.HasFile(pathOrContainerName, fileName);
 
-        public async Task<Dictionary<string, string>> UploadAsync(string pathOrContainerName, IFormFileCollection files)
+        public async Task<List<UploadedFileDto>> UploadAsync(string pathOrContainerName, IFormFileCollection files)
         => await _storage.UploadAsync(pathOrContainerName, files);
     }
 }

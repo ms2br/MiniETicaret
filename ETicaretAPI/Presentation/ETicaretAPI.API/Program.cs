@@ -1,4 +1,4 @@
-using ETicaretAPI.Infrastructure;
+﻿using ETicaretAPI.Infrastructure;
 using ETicaretAPI.Infrastructure.Services.Implements.Storage.Local;
 using ETicaretAPI.Persistence;
 
@@ -10,22 +10,16 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-
         builder.Services.AddControllers();
-        builder.Services.AddPersistenceLayer();
-        builder.Services.AddServicesInfrastructure<LocalStorage>();
+        builder.Services.Configure<Jwt>(builder.Configuration.GetSection("Jwt"));
+        builder.Services.AddPresentationLayer(builder.Configuration.GetSection("Jwt").Get<Jwt>());
         builder.Services.AddCors(options =>
         {
             options.AddDefaultPolicy(policy => policy.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
         });
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
         builder.Services.AddOpenApi();
 
         var app = builder.Build();
-
-
-        // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
             app.MapOpenApi();
@@ -34,11 +28,9 @@ public class Program
         app.UseStaticFiles();
         app.UseCors();
         app.UseHttpsRedirection();
+        app.UseAuthentication();
         app.UseAuthorization();
-
-
         app.MapControllers();
-
         app.Run();
     }
 }

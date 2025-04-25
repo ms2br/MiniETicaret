@@ -1,5 +1,8 @@
 ﻿using ETicaretAPI.Domain.Entities;
 using ETicaretAPI.Domain.Entities.Common;
+using ETicaretAPI.Domain.Entities.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +14,7 @@ using File = ETicaretAPI.Domain.Entities.File;
 
 namespace ETicaretAPI.Persistence.Contexts
 {
-    public class PostgreSQLDbContext : DbContext
+    public class PostgreSQLDbContext : IdentityDbContext<AppUser>
     {
         DbSet<Product> Products { get; set; }
         DbSet<Order> Orders { get; set; }
@@ -20,6 +23,7 @@ namespace ETicaretAPI.Persistence.Contexts
         DbSet<File> Files { get; set; }
         DbSet<InvoiceFile> InvoiceFiles { get; set; }
         DbSet<ProductImageFile> ProductImageFiles { get; set; }
+        DbSet<ProductFile> ProductFiles { get; set; }
         public PostgreSQLDbContext(DbContextOptions options) : base(options)
         { }
 
@@ -39,10 +43,11 @@ namespace ETicaretAPI.Persistence.Contexts
                     entity.Entity.CreationTime = DateTime.UtcNow;
                     entity.Entity.Id = Guid.NewGuid();
                 }
-                else if(entity.State == EntityState.Modified)
+                else if (entity.State == EntityState.Modified)
                 {
                     entity.Entity.UpdateTime = DateTime.UtcNow;
-                }else if(entity.State == EntityState.Deleted)
+                }
+                else if (entity.State == EntityState.Deleted)
                 {
                     entity.Entity.IsDelete = true;
                 }

@@ -19,7 +19,7 @@ namespace ETicaretAPI.Persistence.Configurations
 
             builder.HasOne(x => x.Order)
                 .WithMany(x => x.Products)
-                .HasForeignKey(x => x.ProductId)
+                .HasForeignKey(x => x.OrderId)
                 .OnDelete(DeleteBehavior.NoAction); ;
 
             builder.HasOne(x => x.Product)

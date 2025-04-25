@@ -1,4 +1,5 @@
-﻿using ETicaretAPI.Application.Services.Interfaces.Storage.Local;
+﻿using ETicaretAPI.Application.Dtos.Files;
+using ETicaretAPI.Application.Services.Interfaces.Storage.Local;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
@@ -11,8 +12,6 @@ namespace ETicaretAPI.Infrastructure.Services.Implements.Storage.Local
 {
     public class LocalStorage : Storage, ILocalStorage
     {
-        public string StorageName { get; }
-
         public IWebHostEnvironment _webHostEnvironment { get; }
 
         public LocalStorage(IWebHostEnvironment webHostEnvironment)
@@ -20,9 +19,9 @@ namespace ETicaretAPI.Infrastructure.Services.Implements.Storage.Local
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public async Task<Dictionary<string, string>> UploadAsync(string path, IFormFileCollection files)
+        public async Task<List<UploadedFileDto>> UploadAsync(string path, IFormFileCollection files)
         {
-            Dictionary<string, string> fileDatas = new();
+            List<UploadedFileDto> fileDatas = new();
             string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, path);
             if (!Directory.Exists(uploadPath))
                 Directory.CreateDirectory(uploadPath);
@@ -31,7 +30,11 @@ namespace ETicaretAPI.Infrastructure.Services.Implements.Storage.Local
                 string newFileName = await FileRenameAsync(path,file.Name,HasFile);
                 string fullPath = Path.Combine(uploadPath, newFileName);
                 await CopyFileAsync(fullPath, file);
-                fileDatas.Add(newFileName, fullPath);
+                fileDatas.Add(new()
+                {
+                    NewFileName = newFileName,
+                    Path = $"{path}/{newFileName}"
+                });
             }
             return fileDatas;
         }

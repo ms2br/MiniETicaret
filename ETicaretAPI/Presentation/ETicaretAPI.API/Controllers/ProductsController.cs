@@ -1,15 +1,24 @@
 ﻿using ETicaretAPI.Application.Dtos.Products;
+using ETicaretAPI.Application.Features.Commands.ProductFiles.CreateProductFile;
+using ETicaretAPI.Application.Features.Commands.ProductFiles.RemoveProductFile;
+using ETicaretAPI.Application.Features.Commands.Products.CreateProduct;
+using ETicaretAPI.Application.Features.Commands.Products.RemoveProduct;
+using ETicaretAPI.Application.Features.Commands.Products.UpdateProduct;
+using ETicaretAPI.Application.Features.Queries.ProductFiles;
+using ETicaretAPI.Application.Features.Queries.Products.GetAllProduct;
+using ETicaretAPI.Application.Features.Queries.Products.GetByIdProduct;
+using ETicaretAPI.Application.Helpers.File;
+using ETicaretAPI.Application.Repositories.Interfaces.Files;
+using ETicaretAPI.Application.Repositories.Interfaces.ProductImageFiles;
 using ETicaretAPI.Application.Repositories.Interfaces.Products;
-using ETicaretAPI.Application.RequestParameters;
-using ETicaretAPI.Application.Services.Interfaces;
+using ETicaretAPI.Application.Services.Interfaces.Paginations;
 using ETicaretAPI.Application.Services.Interfaces.Storage;
 using ETicaretAPI.Domain.Entities;
-using ETicaretAPI.Infrastructure.Helpers;
-using ETicaretAPI.Infrastructure.Services.Implements;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using System.Runtime.InteropServices;
 
 namespace ETicaretAPI.API.Controllers
 {
@@ -17,88 +26,74 @@ namespace ETicaretAPI.API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        IProductWriteRepository _wr { get; }
-        IProductReadRepository _rr { get; }
-        IStorageService _service { get; }
+        IMediator _mediator { get; }
+        IRequestInfoService _requestService { get; }
 
-        public ProductsController(
-            IProductWriteRepository wr,
-            IProductReadRepository rr,
-            IWebHostEnvironment webHostEnvironment,
-            IStorageService service)
+
+        public ProductsController(           
+            IMediator mediator,
+            IRequestInfoService requestService)
         {
-            _wr = wr;
-            _rr = rr;
-            _service = service;
+            _mediator = mediator;
+            _requestService = requestService;
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> GetAsync([FromQuery] Pagination pagination)
+        public async Task<IActionResult> GetAsync(GetAllProductQueryRequest? productQueryRequest)
         {
-            var totalCount = _rr.GetAll().Count();
-            var listProduct = _rr.GetAll().Skip(pagination.Page * pagination.Size).Take(pagination.Size).Select(x => new
-            {
-                x.Id,
-                x.Name,
-                x.Price,
-                x.Stock,
-                x.CreationTime,
-                x.UpdateTime
-            });
-
-            return Ok(new
-            {
-                totalCount,
-                listProduct
-            });
+            productQueryRequest = new();
+            productQueryRequest.pagination = _requestService.GetPagination();
+            return Ok(await _mediator.Send(productQueryRequest));
         }
 
-        [HttpGet("[action]/{id?}")]
-        public async Task<IActionResult> GetByIdAsync(string? id)
+        [HttpGet("[action]/{id}")]
+        public async Task<IActionResult> GetByIdAsync([FromRoute]GetByIdProductQueryRequest request)
         {
-            return Ok(await _rr.FindByIdAsync(id, false));
+            return Ok(await _mediator.Send(request));
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> PostAsync(ProductCreateDto dto)
+        public async Task<IActionResult> PostAsync([FromBody] CreateProductCommonRequest request)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                await _wr.AddAsync(new Product
-                {
-                    Name = $"Urun {i}",
-                    Stock = i,
-                    Price = i
-                });
-                await _wr.SaveChangesAsync();
-            }
-            return StatusCode((int)HttpStatusCode.Created);
+            await _mediator.Send(request);
+            return Ok();
         }
 
-        [HttpPut("[action]/{id?}")]
-        public async Task<IActionResult> PutAsync(string? id, ProductUpdateDto dto)
+        [HttpPut("[action]/{id}")]
+        public async Task<IActionResult> PutAsync([FromRoute] string Id ,[FromBody] UpdateProductCommonRequest request)
         {
-            var item = await _wr.FindByIdAsync(id);
-            item.Name = dto.Name;
-            item.Stock = dto.Stock;
-            item.Price = dto.Price;
-            await _wr.SaveChangesAsync();
+            request.Id = Id;
+            await _mediator.Send(request);
             return Ok();
+        }
+
+        [HttpDelete("[action]/{id}")]
+        public async Task<IActionResult> DeleteAsync([FromRoute]RemoveProductCommonRequest request)
+        {
+            await _mediator.Send(request);
+            return Ok();
+        }
+
+        [HttpPut("[action]/{id}")]
+        public async Task<IActionResult> UploadAsync([FromRoute]CreateProductFileCommonRequest request)
+        {
+            await _mediator.Send(request);
+            return Ok();
+        }
+
+        [HttpGet("[action]/{id}")]
+        public async Task<IActionResult> GetProductImagesAsync([FromRoute] GetProductFileQueryRequest request)
+        {
+          
+            return Ok(await _mediator.Send(request));
         }
 
         [HttpDelete("[action]/{id?}")]
-        public async Task<IActionResult> DeleteAsync(string? id)
+        public async Task<IActionResult> DeleteProductImageAsync([FromRoute]string id,[FromQuery] RemoveProductFileCommonRequest request)
         {
-            _wr.Remove(await _wr.FindByIdAsync(id));
-            await _wr.SaveChangesAsync();
+            request.ProductId = id;
+            await _mediator.Send(request);
             return Ok();
         }
-
-        [HttpPost("[action]")]
-        public async Task<IActionResult> UploadAsync()
-        {
-            await _service.UploadAsync(FilesPath.ProductImageFilesPath, Request.Form.Files);
-            return Ok();
-        } 
     }
 }

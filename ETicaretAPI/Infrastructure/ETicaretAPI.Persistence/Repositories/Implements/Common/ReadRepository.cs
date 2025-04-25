@@ -14,16 +14,23 @@ namespace ETicaretAPI.Persistence.Repositories.Implements.Common
     public class ReadRepository<T> : BaseRepository<T> 
         , IReadRepository<T> where T : BaseEntity
     {
-        PostgreSQLDbContext _pdb { get; }
-
         public ReadRepository(PostgreSQLDbContext pdb) : base(pdb)
         {
-            _pdb = pdb;
-        }
-        public IQueryable<T> GetAll()
-        => Table.AsNoTracking();
 
-        public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression)
-        => Table.Where(expression).AsNoTracking();
+        }
+        public IQueryable<T> GetAll(params string[] includes)
+        {
+            IQueryable<T> query = includes.Length > 0 ? includeRelations(Table.AsQueryable(), includes) : Table.AsQueryable();
+
+            return query.AsNoTracking();
+        }
+
+        public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression, params string[] includes)
+        {
+            IQueryable<T> query = includes.Length > 0 ? includeRelations(Table.AsQueryable(), includes) : Table.AsQueryable();
+
+            return query.Where(expression).AsNoTracking();
+        }
+
     }
 }

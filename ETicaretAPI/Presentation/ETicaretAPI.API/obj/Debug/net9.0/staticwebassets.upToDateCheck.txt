@@ -1,1 +1,7 @@
+wwwroot\resource\product-images\imageIcon  Copy.png
+wwwroot\resource\product-images\imageIcon.png
+wwwroot\resource\product-images\resultEmirTimurBilgin .jpg
+wwwroot\resource\product-images\resultmaxresdefault .jpg
+wwwroot\resource\product-images\resultsafbbfeebdebedf.jpg
 wwwroot\resource\product-images\Screenshot (3).png
+wwwroot\resource\product-images\tphtpttpc.png

@@ -10,8 +10,8 @@ namespace ETicaretAPI.Application.Repositories.Interfaces.Common
     public interface IWriteRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
         Task<bool> AddAsync(T data);
-        Task<bool> AddRangesAync(List<T> datas);
-        Task<bool> UpdateAsnyc(T data);
+        Task<bool> AddRangesAsync(List<T> datas);
+        Task<bool> UpdateAsync(T data);
         bool Remove(T data);
     }
 }

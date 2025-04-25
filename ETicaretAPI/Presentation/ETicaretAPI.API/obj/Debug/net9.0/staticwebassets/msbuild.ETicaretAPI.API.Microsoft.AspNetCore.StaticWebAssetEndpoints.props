@@ -1,5 +1,65 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/imageIcon  Copy.d9t0yulstq.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\imageIcon  Copy.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d9t0yulstq"},{"Name":"integrity","Value":"sha256-IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4="},{"Name":"label","Value":"_content/ETicaretAPI.API/resource/product-images/imageIcon  Copy.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1171"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 08:35:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/imageIcon  Copy.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\imageIcon  Copy.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1171"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 08:35:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/imageIcon.d9t0yulstq.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\imageIcon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d9t0yulstq"},{"Name":"integrity","Value":"sha256-IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4="},{"Name":"label","Value":"_content/ETicaretAPI.API/resource/product-images/imageIcon.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1171"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 08:35:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/imageIcon.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\imageIcon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1171"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022IX6Xpk9n\u002B3V/RJiwgDqer6iQKFrWUGgDYvgfOg/TvX4=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 08:35:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/resultEmirTimurBilgin .jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\resultEmirTimurBilgin .jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-XUZ5WsDKvkCElqRovkZpqIysGfg9xn8Sq9vj66dzHfk="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"825940"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022XUZ5WsDKvkCElqRovkZpqIysGfg9xn8Sq9vj66dzHfk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 01:24:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/resultEmirTimurBilgin .z4fkggi79a.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\resultEmirTimurBilgin .jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"z4fkggi79a"},{"Name":"integrity","Value":"sha256-XUZ5WsDKvkCElqRovkZpqIysGfg9xn8Sq9vj66dzHfk="},{"Name":"label","Value":"_content/ETicaretAPI.API/resource/product-images/resultEmirTimurBilgin .jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"825940"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022XUZ5WsDKvkCElqRovkZpqIysGfg9xn8Sq9vj66dzHfk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 01:24:45 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/resultmaxresdefault .jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\resultmaxresdefault .jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oFrvn0FRWXX6gPTCdRzJrQ48axJd6beFiiUqHOjDRBc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"692600"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022oFrvn0FRWXX6gPTCdRzJrQ48axJd6beFiiUqHOjDRBc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 02:44:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/resultmaxresdefault .w4zalk177k.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\resultmaxresdefault .jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w4zalk177k"},{"Name":"integrity","Value":"sha256-oFrvn0FRWXX6gPTCdRzJrQ48axJd6beFiiUqHOjDRBc="},{"Name":"label","Value":"_content/ETicaretAPI.API/resource/product-images/resultmaxresdefault .jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"692600"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022oFrvn0FRWXX6gPTCdRzJrQ48axJd6beFiiUqHOjDRBc=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 02:44:54 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/resultsafbbfeebdebedf.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\resultsafbbfeebdebedf.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZBK7Z4L7IfhXp\u002BLmI4cW/btVp0StY1RLsx7Hbdyt6HY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"354778"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ZBK7Z4L7IfhXp\u002BLmI4cW/btVp0StY1RLsx7Hbdyt6HY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 02:55:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/resultsafbbfeebdebedf.w9gwow6wm8.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\resultsafbbfeebdebedf.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"w9gwow6wm8"},{"Name":"integrity","Value":"sha256-ZBK7Z4L7IfhXp\u002BLmI4cW/btVp0StY1RLsx7Hbdyt6HY="},{"Name":"label","Value":"_content/ETicaretAPI.API/resource/product-images/resultsafbbfeebdebedf.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"354778"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ZBK7Z4L7IfhXp\u002BLmI4cW/btVp0StY1RLsx7Hbdyt6HY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 01 Apr 2025 02:55:36 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/Screenshot (3).30lvfgpr1c.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\Screenshot (3).png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -11,6 +71,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"168404"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022E3vrPMShZhYPCYeJt4uOhguW7b/bv6Kx/X9iYAnO1MQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 27 Mar 2025 03:36:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/tphtpttpc.62f5n4ova5.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\tphtpttpc.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"62f5n4ova5"},{"Name":"integrity","Value":"sha256-fiIdosCKadV\u002BrPYmJ4aZNWbwNc9zdW67X4GFqILQ550="},{"Name":"label","Value":"_content/ETicaretAPI.API/resource/product-images/tphtpttpc.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"187256"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022fiIdosCKadV\u002BrPYmJ4aZNWbwNc9zdW67X4GFqILQ550=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 08:35:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ETicaretAPI.API/resource/product-images/tphtpttpc.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\resource\product-images\tphtpttpc.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-fiIdosCKadV\u002BrPYmJ4aZNWbwNc9zdW67X4GFqILQ550="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"187256"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022fiIdosCKadV\u002BrPYmJ4aZNWbwNc9zdW67X4GFqILQ550=\u0022"},{"Name":"Last-Modified","Value":"Wed, 02 Apr 2025 08:35:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

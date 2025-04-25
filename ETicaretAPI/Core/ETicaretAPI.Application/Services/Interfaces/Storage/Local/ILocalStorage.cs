@@ -9,7 +9,6 @@ namespace ETicaretAPI.Application.Services.Interfaces.Storage.Local
 {
     public interface ILocalStorage : IStorage
     {
-
         public Task CopyFileAsync(string path, IFormFile file);
     }
 }

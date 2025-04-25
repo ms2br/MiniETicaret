@@ -8,6 +8,6 @@ namespace ETicaretAPI.Application.Services.Interfaces.Storage
 {
     public interface IStorageService : IStorage
     {
-        protected string StorageName { get; }
+        public string StorageName { get; }
     }
 }

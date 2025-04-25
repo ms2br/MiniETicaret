@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\resource\\product-images\\Screenshot (3).png"
     },
     {
+      "Id": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\imageIcon  Copy.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\imageIcon  Copy.png"
+    },
+    {
+      "Id": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\imageIcon.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\imageIcon.png"
+    },
+    {
+      "Id": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\resultEmirTimurBilgin .jpg",
+      "PackagePath": "staticwebassets\\resource\\product-images\\resultEmirTimurBilgin .jpg"
+    },
+    {
+      "Id": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\resultmaxresdefault .jpg",
+      "PackagePath": "staticwebassets\\resource\\product-images\\resultmaxresdefault .jpg"
+    },
+    {
+      "Id": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\resultsafbbfeebdebedf.jpg",
+      "PackagePath": "staticwebassets\\resource\\product-images\\resultsafbbfeebdebedf.jpg"
+    },
+    {
+      "Id": "C:\\Users\\namelesswarrior\\Desktop\\ETicaret\\ETicaretAPI\\Presentation\\ETicaretAPI.API\\wwwroot\\resource\\product-images\\tphtpttpc.png",
+      "PackagePath": "staticwebassets\\resource\\product-images\\tphtpttpc.png"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.ETicaretAPI.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

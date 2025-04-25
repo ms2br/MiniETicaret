@@ -1,5 +1,5 @@
-﻿using ETicaretAPI.Application.Services.Interfaces.Storage;
-using ETicaretAPI.Infrastructure.Helpers;
+﻿using ETicaretAPI.Application.Helpers.File;
+using ETicaretAPI.Application.Services.Interfaces.Storage;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -11,7 +11,6 @@ namespace ETicaretAPI.Infrastructure.Services.Implements.Storage
 {
     public class Storage
     {
-
         protected delegate Task<bool> HasFile(string pathOrContainerName, string fileName);
 
         protected async Task<string> FileRenameAsync(string pathOrContainerName, string fileName,HasFile hasFile)

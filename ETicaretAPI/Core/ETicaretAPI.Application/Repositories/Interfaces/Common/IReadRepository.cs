@@ -10,7 +10,7 @@ namespace ETicaretAPI.Application.Repositories.Interfaces.Common
 {
     public interface IReadRepository<T> : IBaseRepository<T> where T : BaseEntity
     {
-        IQueryable<T> GetAll();
-        IQueryable<T> GetWhere(Expression<Func<T, bool>> expression);
+        IQueryable<T> GetAll(params string[] includes);
+        IQueryable<T> GetWhere(Expression<Func<T, bool>> expression, params string[] includes);
     }
 }
